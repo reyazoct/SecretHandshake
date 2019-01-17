@@ -28,4 +28,9 @@ describe('Secret Handshake', () => {
     test('binary 11111 (decimal 31) is jump, close your eyes, double blink, and wink', () => {
         expect(secretHandshake(31)).toEqual(['jump', 'close your eyes', 'double blink', 'wink']);
     });
+
+    test('Invalid secret handle', () => {
+        expect(() => secretHandshake('piggies'))
+            .toThrow(new Error('Handshake must be a number'));
+    });
 });

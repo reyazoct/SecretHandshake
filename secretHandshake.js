@@ -1,5 +1,8 @@
 export const secretHandshake = (decimalValue) => {
     const listItem = ['wink', 'double blink', 'close your eyes', 'jump'];
+
+    if(isNaN(decimalValue))
+        throw new Error('Handshake must be a number');
     let binaryValue = decimalValue.toString(2);
 
     const getItems = (accumulator, current, curIndex) => {
