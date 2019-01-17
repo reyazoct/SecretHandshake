@@ -16,4 +16,8 @@ describe('Secret Handshake', () => {
     test('binary 1000 (decimal 8) is jump', () => {
         expect(secretHandshake(8)).toEqual(['jump']);
     });
+
+    test('binary 11 (decimal 3) is wink and double blink', () => {
+        expect(secretHandshake(3)).toEqual(['wink', 'double blink']);
+    });
 });
