@@ -9,7 +9,7 @@ export const secretHandshake = (decimalValue) => {
     let returnValue = binaryValue.split('')
         .reverse()
         .reduce(getItems, []);
-    
+
     if(binaryValue.length < 5)
         return returnValue;
     returnValue.pop();
